@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Daven">
 <meta property="og:description" content="搭建一个免费的博客站点,主要用到github和Next">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2019-01-10T09:22:47.826Z">
+<meta property="og:updated_time" content="2019-01-10T09:26:15.624Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="搭建一个免费的博客站点,主要用到github和Next">
@@ -446,7 +446,7 @@
                 
               
 
-              <time title="建てられる：2019-01-10 17:03:39 / 修正する：17:22:47" itemprop="dateCreated datePublished" datetime="2019-01-10T17:03:39+08:00">2019-01-10</time>
+              <time title="建てられる：2019-01-10 17:03:39 / 修正する：17:26:15" itemprop="dateCreated datePublished" datetime="2019-01-10T17:03:39+08:00">2019-01-10</time>
             
 
             
@@ -487,7 +487,7 @@
 
       
         <p>有关github搭建免费博客的方法已有很多,再次赘述的目的是为了记录自己在搭建时所遇到的诸多比较麻烦的问题,方便以后查阅.</p>
-<h6 id="1-准备工作-github-git-bash-node-js-npm-Next主题"><a href="#1-准备工作-github-git-bash-node-js-npm-Next主题" class="headerlink" title="1. 准备工作(github,git bash,node.js,npm,Next主题)"></a>1. 准备工作(github,git bash,node.js,npm,Next主题)</h6><ul>
+<h6 id="准备工作-github-git-bash-node-js-npm-Next主题"><a href="#准备工作-github-git-bash-node-js-npm-Next主题" class="headerlink" title="准备工作(github,git bash,node.js,npm,Next主题)"></a>准备工作(github,git bash,node.js,npm,Next主题)</h6><ul>
 <li><p>github<br>新建一个名称为 <code>github用户名.github.io</code> 的仓库,作为存放博客文件和代码的地方</p>
 </li>
 <li><p>git<br>在自己的计算机上安装git,用于将写好的博客和配置文件推送到github的远程仓库</p>
@@ -499,10 +499,35 @@
 </code></pre></li>
 <li><p>hexo<br>在本地新建一个文件夹作为本地仓库(在本地仓库写博客修改再推送到远程仓库),在文件夹内输入以下命令</p>
 <pre><code>hexo init
-</code></pre><p>|hexo的几个常用命令|作用|<br>|:—-:|:—-:|<br>|hexo clean| 清除缓存|<br>|hexo g|生成静态网页|<br>|hexo s|本地生成博客网站|<br>|hexo d|部署到远程|</p>
-</li>
+</code></pre></li>
 </ul>
-<h6 id="2-Next主题配置"><a href="#2-Next主题配置" class="headerlink" title="2. Next主题配置"></a>2. Next主题配置</h6><p>Next主题的安装,建议去github上下载zip包,本地解压放进博客根目录下的themes文件夹下,对应的修改站点配置文件<code>_config.yml</code>里的theme项为next(next是<strong>存放主题</strong>的文件名称)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">hexo的几个常用命令</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">hexo clean</td>
+<td style="text-align:center">清除缓存</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo g</td>
+<td style="text-align:center">生成静态网页</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo s</td>
+<td style="text-align:center">本地生成博客网站</td>
+</tr>
+<tr>
+<td style="text-align:center">hexo d</td>
+<td style="text-align:center">部署到远程</td>
+</tr>
+</tbody>
+</table>
+<h6 id="Next主题配置"><a href="#Next主题配置" class="headerlink" title="Next主题配置"></a>Next主题配置</h6><p>Next主题的安装,建议去github上下载zip包,本地解压放进博客根目录下的themes文件夹下,对应的修改站点配置文件<code>_config.yml</code>里的theme项为next(next是<strong>存放主题</strong>的文件名称)</p>
 <ul>
 <li><p>修改Next主题风格<br>Next通过四种风格可选,个人比较偏好最后一个,可以自己尝试修改</p>
 <pre><code># Schemes
@@ -532,7 +557,7 @@ type: &quot;tags&quot;
 npm install hexo-generator-sitemap --save
 </code></pre></li>
 </ul>
-<h6 id="3-评论系统Gitalk的配置使用"><a href="#3-评论系统Gitalk的配置使用" class="headerlink" title="3. 评论系统Gitalk的配置使用"></a>3. 评论系统Gitalk的配置使用</h6><p>首先，你得有一个<strong>Github</strong>账号（这个就不多说了吧），下面，打开<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener"><strong><em>这个链接</em></strong></a>，具体填法如下：</p>
+<h6 id="评论系统Gitalk的配置使用"><a href="#评论系统Gitalk的配置使用" class="headerlink" title="评论系统Gitalk的配置使用"></a>评论系统Gitalk的配置使用</h6><p>首先，你得有一个<strong>Github</strong>账号（这个就不多说了吧），下面，打开<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener"><strong><em>这个链接</em></strong></a>，具体填法如下：</p>
 <pre><code>Application name //应用名称，随便填
 Homepage URL //没有过多要求，可以填自己的博客地址
 Application description //应用描述，描述一下，无要求
@@ -550,11 +575,11 @@ perPage: 15 #每页多少个评论
 pagerDirection: last #排序方式是从旧到新（first）还是从新到旧（last）
 createIssueManually: true #如果当前页面没有相应的 isssue ，且登录的用户属            于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
 distractionFreeMode: false #是否启用快捷键(cmd|ctrl + enter) 提交评论.
-</code></pre><h6 id="4-推送远程仓库的常见问题"><a href="#4-推送远程仓库的常见问题" class="headerlink" title="4. 推送远程仓库的常见问题"></a>4. 推送远程仓库的常见问题</h6><pre><code>deploy:
+</code></pre><h6 id="推送远程仓库的常见问题"><a href="#推送远程仓库的常见问题" class="headerlink" title="推送远程仓库的常见问题"></a>推送远程仓库的常见问题</h6><pre><code>deploy:
 type: git
 repository: git@github.com:xxx/xxx.github.io.git
 branch: master
-</code></pre><h5 id="参考附录"><a href="#参考附录" class="headerlink" title="参考附录"></a>参考附录</h5><ul>
+</code></pre><h6 id="参考附录"><a href="#参考附录" class="headerlink" title="参考附录"></a>参考附录</h6><ul>
 <li><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html#%E5%89%8D%E8%A8%80" target="_blank" rel="noopener">小茗同学的博客园</a></li>
 <li><a href="https://juejin.im/post/5a6ee00ef265da3e4b770ac1#heading-19" target="_blank" rel="noopener">关于HEXO搭建个人博客的点点滴滴</a></li>
 <li><a href="https://zhiho.github.io/2015/09/29/hexo-next/" target="_blank" rel="noopener">Hexo搭建Github博客(三)-Next主题配置使用</a></li>
@@ -737,7 +762,7 @@ branch: master
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-准备工作-github-git-bash-node-js-npm-Next主题"><span class="nav-number">1.</span> <span class="nav-text">1. 准备工作(github,git bash,node.js,npm,Next主题)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-Next主题配置"><span class="nav-number">2.</span> <span class="nav-text">2. Next主题配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-评论系统Gitalk的配置使用"><span class="nav-number">3.</span> <span class="nav-text">3. 评论系统Gitalk的配置使用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-推送远程仓库的常见问题"><span class="nav-number">4.</span> <span class="nav-text">4. 推送远程仓库的常见问题</span></a></li></ol><li class="nav-item nav-level-5"><a class="nav-link" href="#参考附录"><span class="nav-number"></span> <span class="nav-text">参考附录</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#准备工作-github-git-bash-node-js-npm-Next主题"><span class="nav-number">1.</span> <span class="nav-text">准备工作(github,git bash,node.js,npm,Next主题)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Next主题配置"><span class="nav-number">2.</span> <span class="nav-text">Next主题配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#评论系统Gitalk的配置使用"><span class="nav-number">3.</span> <span class="nav-text">评论系统Gitalk的配置使用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#推送远程仓库的常见问题"><span class="nav-number">4.</span> <span class="nav-text">推送远程仓库的常见问题</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#参考附录"><span class="nav-number">5.</span> <span class="nav-text">参考附录</span></a></li></ol></div>
             
 
           </div>
