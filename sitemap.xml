@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://arnoqlk.github.io/about/index.html</loc>
+    
+    <lastmod>2019-01-10T03:31:39.850Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://arnoqlk.github.io/categories/index.html</loc>
     
     <lastmod>2019-01-10T03:23:40.021Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://arnoqlk.github.io/2019/01/10/hello-world/</loc>
     
     <lastmod>2019-01-10T02:40:05.148Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://arnoqlk.github.io/about/index.html</loc>
-    
-    <lastmod>2018-12-01T15:25:29.364Z</lastmod>
     
   </url>
   
