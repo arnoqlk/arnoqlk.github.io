@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="creat your own blog!">
+  <meta name="description" content="搭建一个免费的博客站点,主要用到github和Next">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://arnoqlk.github.io/2019/01/10/hello-world/index.html">
+<meta property="og:url" content="https://arnoqlk.github.io/2019/01/10/基于github的Next主题博客搭建/index.html">
 <meta property="og:site_name" content="Daven">
-<meta property="og:description" content="creat your own blog!">
+<meta property="og:description" content="搭建一个免费的博客站点,主要用到github和Next">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2019-01-10T02:40:05.148Z">
+<meta property="og:updated_time" content="2019-01-10T09:06:52.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="creat your own blog!">
+<meta name="twitter:description" content="搭建一个免费的博客站点,主要用到github和Next">
 
 
 
 
 
 
-  <link rel="canonical" href="https://arnoqlk.github.io/2019/01/10/hello-world/">
+  <link rel="canonical" href="https://arnoqlk.github.io/2019/01/10/基于github的Next主题博客搭建/">
 
 
 
@@ -403,7 +403,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://arnoqlk.github.io/2019/01/10/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://arnoqlk.github.io/2019/01/10/基于github的Next主题博客搭建/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Daven">
@@ -446,7 +446,7 @@
                 
               
 
-              <time title="建てられる：2019-01-10 09:41:53 / 修正する：10:40:05" itemprop="dateCreated datePublished" datetime="2019-01-10T09:41:53+08:00">2019-01-10</time>
+              <time title="建てられる：2019-01-10 17:03:39 / 修正する：17:06:52" itemprop="dateCreated datePublished" datetime="2019-01-10T17:03:39+08:00">2019-01-10</time>
             
 
             
@@ -470,7 +470,7 @@
           
 
           
-            <div class="post-description">creat your own blog!</div>
+            <div class="post-description">搭建一个免费的博客站点,主要用到github和Next</div>
           
 
         </div>
@@ -486,15 +486,80 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>有关github搭建免费博客的方法已有很多,再次赘述的目的是为了记录自己在搭建时所遇到的诸多比较麻烦的问题,方便以后查阅.</p>
+<h6 id="1-准备工作-github-git-bash-node-js-npm-Next主题"><a href="#1-准备工作-github-git-bash-node-js-npm-Next主题" class="headerlink" title="1. 准备工作(github,git bash,node.js,npm,Next主题)"></a>1. 准备工作(github,git bash,node.js,npm,Next主题)</h6><ul>
+<li><p>github<br>新建一个名称为 <code>github用户名.github.io</code> 的仓库,作为存放博客文件和代码的地方</p>
+</li>
+<li><p>git<br>在自己的计算机上安装git,用于将写好的博客和配置文件推送到github的远程仓库</p>
+</li>
+<li><p>node.js<br>node.js是JavaScript的一种运行环境,npm是包含在npm的,具体的下载可以百度</p>
+</li>
+<li><p>npm<br>npm用来安装hexo(简洁高效的博客框架),在git bash使用以下命令安装</p>
+<pre><code>npm install -g hexo
+</code></pre></li>
+<li><p>hexo<br>在本地新建一个文件夹作为本地仓库(在本地仓库写博客修改再推送到远程仓库),在文件夹内输入以下命令</p>
+<pre><code>hexo init
+</code></pre><p>|hexo的几个常用命令|作用|<br>|:-:|:-:|<br>|hexo clean| 清除缓存|<br>|hexo g|生成静态网页|<br>|hexo s|本地生成博客网站|<br>|hexo d|部署到远程|</p>
+</li>
+</ul>
+<h6 id="2-Next主题配置"><a href="#2-Next主题配置" class="headerlink" title="2. Next主题配置"></a>2. Next主题配置</h6><p>Next主题的安装,建议去github上下载zip包,本地解压放进博客根目录下的themes文件夹下,对应的修改站点配置文件<code>_config.yml</code>里的theme项为next(next是<strong>存放主题</strong>的文件名称)</p>
+<ul>
+<li><p>修改Next主题风格<br>Next通过四种风格可选,个人比较偏好最后一个,可以自己尝试修改</p>
+<pre><code># Schemes
+# scheme: Muse
+# scheme: Mist
+# scheme: Pisces
+scheme: Gemini
+</code></pre></li>
+<li><p>菜单设置<br>Next默认只有两个菜单导航条,可以在主题配置文件中修改</p>
+<pre><code>menu:
+home: /                       #主页
+categories: /categories    #分类页（需手动创建）
+about: /about        #关于页面（需手动创建）
+archives: /archives        #归档页
+tags: /tags            #标签页（需手动创建）
+commonweal: /404.html        #公益 404 （需手动创建）
+</code></pre><p>手动创建是指,举个例子,譬如要打开tags导航条,在git bash下运行,</p>
+<pre><code>hexo new page &quot;tags&quot;
+</code></pre><p>并修改/source/categories目录下的index.md文件</p>
+<pre><code>title: tags
+date: 2015-09-29 14:47:21
+type: &quot;tags&quot;
+---
+</code></pre></li>
+<li><p>sitmap插件<br>Sitemap 可方便管理员通知搜索引擎他们网站上有哪些可供抓取的网页，有助于让别人更好地通过搜索到自己的博客</p>
+<pre><code>安装
+npm install hexo-generator-sitemap --save
+</code></pre></li>
+</ul>
+<h6 id="3-评论系统Gitalk的配置使用"><a href="#3-评论系统Gitalk的配置使用" class="headerlink" title="3. 评论系统Gitalk的配置使用"></a>3. 评论系统Gitalk的配置使用</h6><p>首先，你得有一个<strong>Github</strong>账号（这个就不多说了吧），下面，打开<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener"><strong><em>这个链接</em></strong></a>，具体填法如下：</p>
+<pre><code>Application name //应用名称，随便填
+Homepage URL //没有过多要求，可以填自己的博客地址
+Application description //应用描述，描述一下，无要求
+Authorization callback URL //这个就有要求了，填自己要使用Gitment的博客地址，不可乱填
+</code></pre><p>对应到主题配置文件下的gitalk</p>
+<pre><code>enable: true #指的是是否开启Gitalk
+ClientID: xxxxxx #之前的Client ID
+ClientSecret: xxxxxxxxxxxx #之前的Client Secret
+repo: gitalk #你要存放的项目名，下文会详细再说
+owner: geedme #这个项目名的拥有者（GitHub账号或组织）
+adminUser: geedme #管理员用户，下文也会详细讲
+ID: location.pathname #页面ID，不知道就默认的就好了
+labels: gitalk #GitHub issues的标签，下面会详细说
+perPage: 15 #每页多少个评论
+pagerDirection: last #排序方式是从旧到新（first）还是从新到旧（last）
+createIssueManually: true #如果当前页面没有相应的 isssue ，且登录的用户属            于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
+distractionFreeMode: false #是否启用快捷键(cmd|ctrl + enter) 提交评论.
+</code></pre><h6 id="4-推送远程仓库的常见问题"><a href="#4-推送远程仓库的常见问题" class="headerlink" title="4. 推送远程仓库的常见问题"></a>4. 推送远程仓库的常见问题</h6><pre><code>deploy:
+type: git
+repository: git@github.com:xxx/xxx.github.io.git
+branch: master
+</code></pre><h5 id="参考附录"><a href="#参考附录" class="headerlink" title="参考附录"></a>参考附录</h5><ul>
+<li><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html#%E5%89%8D%E8%A8%80" target="_blank" rel="noopener">小茗同学的博客园</a></li>
+<li><a href="https://juejin.im/post/5a6ee00ef265da3e4b770ac1#heading-19" target="_blank" rel="noopener">关于HEXO搭建个人博客的点点滴滴</a></li>
+<li><a href="https://zhiho.github.io/2015/09/29/hexo-next/" target="_blank" rel="noopener">Hexo搭建Github博客(三)-Next主题配置使用</a></li>
+<li><a href="https://iochen.com/2018/01/06/use-gitalk-in-hexo/" target="_blank" rel="noopener">Hexo中Gitalk配置使用教程</a></li>
+</ul>
 
       
     </div>
@@ -527,6 +592,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/17/ARCH模型/" rel="next" title="条件异方差模型">
+                <i class="fa fa-chevron-left"></i> 条件异方差模型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -599,7 +680,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">ポスト</span>
                   </a>
                 </div>
@@ -616,7 +697,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">タグ</span>
                   </a>
                 </div>
@@ -652,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-准备工作-github-git-bash-node-js-npm-Next主题"><span class="nav-number">1.</span> <span class="nav-text">1. 准备工作(github,git bash,node.js,npm,Next主题)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-Next主题配置"><span class="nav-number">2.</span> <span class="nav-text">2. Next主题配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-评论系统Gitalk的配置使用"><span class="nav-number">3.</span> <span class="nav-text">3. 评论系统Gitalk的配置使用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-推送远程仓库的常见问题"><span class="nav-number">4.</span> <span class="nav-text">4. 推送远程仓库的常见问题</span></a></li></ol><li class="nav-item nav-level-5"><a class="nav-link" href="#参考附录"><span class="nav-number"></span> <span class="nav-text">参考附录</span></a></li></div>
             
 
           </div>
