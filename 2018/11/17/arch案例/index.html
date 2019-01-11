@@ -96,24 +96,33 @@
 
 
 
-  <meta name="description" content="“欲去惰字，总以不晏起为第一义”">
-<meta name="keywords" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Daven">
-<meta property="og:url" content="https://arnoqlk.github.io/tags/Hexo/index.html">
+  <meta name="description" content="条件异方差模型的一个案例,接着上一篇博文">
+<meta name="keywords" content="SAS,Time Series">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARCH模型案例">
+<meta property="og:url" content="https://arnoqlk.github.io/2018/11/17/arch案例/index.html">
 <meta property="og:site_name" content="Daven">
-<meta property="og:description" content="“欲去惰字，总以不晏起为第一义”">
+<meta property="og:description" content="条件异方差模型的一个案例,接着上一篇博文">
 <meta property="og:locale" content="ja">
+<meta property="og:image" content="https://arnoqlk.github.io/assets/GARCH/3.png">
+<meta property="og:image" content="https://arnoqlk.github.io/assets/GARCH/7.png">
+<meta property="og:image" content="https://arnoqlk.github.io/assets/GARCH/4.png">
+<meta property="og:image" content="https://arnoqlk.github.io/assets/GARCH/5.png">
+<meta property="og:image" content="https://arnoqlk.github.io/assets/GARCH/6.png">
+<meta property="og:image" content="https://arnoqlk.github.io/assets/GARCH/8.png">
+<meta property="og:image" content="https://arnoqlk.github.io/assets/GARCH/9.png">
+<meta property="og:updated_time" content="2019-01-11T10:31:40.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Daven">
-<meta name="twitter:description" content="“欲去惰字，总以不晏起为第一义”">
+<meta name="twitter:title" content="ARCH模型案例">
+<meta name="twitter:description" content="条件异方差模型的一个案例,接着上一篇博文">
+<meta name="twitter:image" content="https://arnoqlk.github.io/assets/GARCH/3.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://arnoqlk.github.io/tags/Hexo/">
+  <link rel="canonical" href="https://arnoqlk.github.io/2018/11/17/arch案例/">
 
 
 
@@ -123,7 +132,7 @@
   };
 </script>
 
-  <title>タグ: Hexo | Daven</title>
+  <title>ARCH模型案例 | Daven</title>
   
 
 
@@ -171,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -243,7 +252,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -382,88 +391,217 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Hexo<small>タグ</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://arnoqlk.github.io/2018/11/17/arch案例/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Daven">
+      <meta itemprop="description" content="“欲去惰字，总以不晏起为第一义”">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Daven">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/01/10/基于github的Next主题博客搭建/" itemprop="url">
-            
-              <span itemprop="name">基于github的Next主题博客搭建</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">ARCH模型案例
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-10T17:03:39+08:00" content="2019-01-10">
-          01-10
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+
+              
+                
+              
+
+              <time title="建てられる：2018-11-17 23:44:18" itemprop="dateCreated datePublished" datetime="2018-11-17T23:44:18+08:00">2018-11-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">に編集されました</span>
+                
+                <time title="修正する：2019-01-11 18:31:40" itemprop="dateModified" datetime="2019-01-11T18:31:40+08:00">2019-01-11</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            <div class="post-description">条件异方差模型的一个案例,接着上一篇博文</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
+<p>对1926-1991年标普500股票股价波动的模型拟合</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="数据录入"><a href="#数据录入" class="headerlink" title="数据录入"></a>数据录入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data a;</span><br><span class="line">input return@@;</span><br><span class="line">t=intnx(&apos;month&apos;,&apos;1oct1926&apos;d,_n_-1);</span><br><span class="line">format t monyy5.;</span><br><span class="line">cards;</span><br><span class="line">...  # 数据集</span><br><span class="line">;</span><br></pre></td></tr></table></figure>
+<h3 id="模型构建"><a href="#模型构建" class="headerlink" title="模型构建"></a>模型构建</h3><h4 id="ARIMA-尝试"><a href="#ARIMA-尝试" class="headerlink" title="ARIMA(尝试)"></a>ARIMA(尝试)</h4><p>对原序列进行模型识别,尝试建立ARMA模型失败.由图,序列自相关系数落在两倍标准差之上,具有长期自相关的特征</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">proc arima;</span><br><span class="line">identify var=return minic;</span><br></pre></td></tr></table></figure>
+<p><img src="/assets/GARCH/3.png" alt="自相关图"></p>
+<p>序列总体定阶 q=3</p>
+<p><img src="/assets/GARCH/7.png" alt="最小信息准则"></p>
+<h4 id="残差自回归模型"><a href="#残差自回归模型" class="headerlink" title="残差自回归模型"></a>残差自回归模型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">proc autoreg;</span><br><span class="line"></span><br><span class="line"># 指令系统建立序列return的线性回归模型,</span><br><span class="line">#绘制残差序列的5阶自相关图,输出dw检验及P值,对残差序列进行异方差检验.</span><br><span class="line"># garch=(q=3) noint 通过对输出的分析后加的</span><br><span class="line">model return=t/nlag=5 dwprob archtest garch=(q=3) noint;</span><br><span class="line"></span><br><span class="line"># 输出到out数据集中</span><br><span class="line">output  out=out lcl=lcl ucl=ucl cev=cev;</span><br></pre></td></tr></table></figure>
+<p>DW检验显示与时间t不存在相关性</p>
+<p><img src="/assets/GARCH/4.png" alt="普通最小二乘估计输出结果"></p>
+<p>残差序列5阶滞后自相关图不存在截尾特征</p>
+<p><img src="/assets/GARCH/5.png" alt="残差序列5阶滞后自相关图"></p>
+<p>异方差检验,拒绝原假设,方差非齐</p>
+<p><img src="/assets/GARCH/6.png" alt="异方差检验结果"></p>
+<p>结合自相关图和异方差检验,拟合ARCH(3)模型</p>
+<p><img src="/assets/GARCH/8.png" alt="最终模型参数检验"></p>
+<h4 id="拟合图形绘制"><a href="#拟合图形绘制" class="headerlink" title="拟合图形绘制"></a>拟合图形绘制</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data out;</span><br><span class="line">set out;</span><br><span class="line">Lcl_ARCH=-1.96*sqrt(cev);</span><br><span class="line">Ucl_ARCH=1.96*sqrt(cev);</span><br><span class="line">proc gplot data=out;</span><br><span class="line">plot return*t=2 lcl*t=3 LCL_arch*t=4 ucl*t=3 UCL_arch*t=4 /overlay;</span><br><span class="line">symbol2 c=green i=needle v=none ;</span><br><span class="line">symbol3 c=black i=join v=none w=2 l=2;</span><br><span class="line">symbol4 c=red i=join v=none ;</span><br><span class="line">run;</span><br></pre></td></tr></table></figure>
+<p><img src="/assets/GARCH/9.png" alt="拟合图"></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/SAS/" rel="tag"># SAS</a>
+          
+            <a href="/tags/Time-Series/" rel="tag"># Time Series</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/17/汉诺塔/" rel="prev" title="Python实现递归案例汉诺塔">
+                Python实现递归案例汉诺塔 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -484,8 +622,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            見出し
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            概要
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -565,6 +712,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据录入"><span class="nav-number">2.</span> <span class="nav-text">数据录入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型构建"><span class="nav-number">3.</span> <span class="nav-text">模型构建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ARIMA-尝试"><span class="nav-number">3.1.</span> <span class="nav-text">ARIMA(尝试)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#残差自回归模型"><span class="nav-number">3.2.</span> <span class="nav-text">残差自回归模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拟合图形绘制"><span class="nav-number">3.3.</span> <span class="nav-text">拟合图形绘制</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -689,6 +853,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
@@ -698,6 +866,34 @@
 
 
   
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'd0bd64645334598b5dfe',
+    clientSecret: '5782623218c4f97f065c3199e31595b5c060bf8f',
+    repo: 'arnoqlk.github.io',
+    owner: 'arnoqlk',
+    admin: ['arnoqlk'],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
 
 
 
@@ -1042,6 +1238,43 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
   
 
 

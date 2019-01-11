@@ -14,10 +14,30 @@
   <entry>
     <title><![CDATA[条件异方差模型]]></title>
     <url>%2F2018%2F11%2F17%2FARCH%E6%A8%A1%E5%9E%8B%2F</url>
-    <content type="text"><![CDATA[对于异方差序列的精确拟合,有方差齐性变化以及条件异方差模型两种方法.实践中,异方差函数的具体形式一般未知,因此在宏观经济领域和金融领域广泛采用条件异方差模型对异方差波动进行处理 前置1. 集群效应对于提取完毕确定性信息之后,残差序列的波动,具有某些时段波动持续偏大的特征,如图示 说明: 集群效应,其本质是异方差现象.出现集群效应的时间序列,其方差基本齐性,但存在某段或某几段方差异与期望方差.因此基于齐性方差的分析方法无法确切拟合.通常,意味着需要引用 条件方差模型 2. ARCH 模型 全称,自回归条件方差模型(autoregressive conditional heteroskedastic),1982. Engle 提出 构造原理: 假设在历史数据已知的情况下,零均值、纯随机残差序列具有异方差性.$$Var(ε_t)=h_t$$在满足正态分布的假定下,异方差等价于残差平方的均值$$E(ε^2_t)=h_t$$ARCH模型可以提取残差平方序列的相关信息,以获得原序列异方差特征. 模型意图: 在已知的ARIMA模型,残差自回归模型,以及确定性因素的分解模型拟合的是序列的平均水平,本质上只是一个点估计,无法给出估计的精度.或者说由于假定了方差齐性,其给出的区间估计是一个定值.对于存在异方差现象的序列无法精确的拟合.图片上述提到构建ARCH模型的意图是使用自回归提取误差平方序列的相关信息.它的条件方差是一个时变函数,更能及时的反映序列即期波动的特征,即异方差特征 ARCH检验: 在拟合ARCH模型的开始,需要对序列进行ARCH检验.要求序列的异方差是由于某种自相关性造成的.常用的两种统计方法: Portmanteau Q 检验和 LM检验 Portmanteau Q检验: 构造思想是如果残差序列方差非齐,且具有集群效应,那么残差平方序列通常具有自相关性.所以方差非齐的检验可以转换为残差平方序列的自相关检验假设条件: 当Q(q)统计量的P值小于显著水平α时,拒绝原假设,认为该序列方差非齐且具有自相关关系 LM检验: 构造思想是如果残差序列方差非齐,且具有集群效应,那么残差序列具有自相关性.因此可以尝试对残差平方序列进行自回归模型的拟合(ARCH(q)模型) $$ε^2_t=ω+ \sumλjε^2{t-j}+e_t$$假设条件: 于是方差齐性的检验转换成这个方差是否显著成立的检验,若方差显著,意味着残差平方序列具有自相关性,可以用该回归方差提取自相关信息.决策:P值小于显著水平α时,拒绝原假设,认为该序列方差非齐,并且可以使用q阶自回归拟合残差平方序列的自相关关系 实例对1926-1991年标普500股票股价波动的模型拟合 导入数据 123456789data a;input return@@;t=intnx(&apos;month&apos;,&apos;1oct1926&apos;d,_n_-1);format t monyy5.;cards;... # 数据集较大... # 省略号代替...; (可选)对原序列进行模型识别,尝试建立ARMA模型失败.由图,序列自相关系数落在两倍标准差之上,具有长期自相关的特征 12proc arima;identify var=return minic; 序列总体定阶 q=3 考虑建立残差自回归模型123456789proc autoreg;# 指令系统建立序列return的线性回归模型,#绘制残差序列的5阶自相关图,输出dw检验及P值,对残差序列进行异方差检验.# garch=(q=3) noint 通过对输出的分析后加的model return=t/nlag=5 dwprob archtest garch=(q=3) noint;# 输出到out数据集中output out=out lcl=lcl ucl=ucl cev=cev; DW检验显示与时间t不存在相关性 残差序列5阶滞后自相关图不存在截尾特征 异方差检验,拒绝原假设,方差非齐 结合自相关图和异方差检验,拟合ARCH(3)模型 对建立的模型进行汇图12345678910data out;set out;Lcl_ARCH=-1.96*sqrt(cev);Ucl_ARCH=1.96*sqrt(cev);proc gplot data=out;plot return*t=2 lcl*t=3 LCL_arch*t=4 ucl*t=3 UCL_arch*t=4 /overlay;symbol2 c=green i=needle v=none ;symbol3 c=black i=join v=none w=2 l=2;symbol4 c=red i=join v=none ;run;]]></content>
+    <content type="text"><![CDATA[对于异方差序列的精确拟合,有方差齐性变化以及条件异方差模型两种方法.实践中,异方差函数的具体形式一般未知,因此在宏观经济领域和金融领域广泛采用条件异方差模型对异方差波动进行处理 集群效应对于提取完毕确定性信息之后,残差序列的波动,具有某些时段波动持续偏大的特征,如图示 说明: 集群效应,其本质是异方差现象.出现集群效应的时间序列,其方差基本齐性,但存在某段或某几段方差异与期望方差.因此基于齐性方差的分析方法无法确切拟合.通常,意味着需要引用 条件方差模型 ARCH 模型 全称,自回归条件方差模型(autoregressive conditional heteroskedastic),1982. Engle 提出 构造原理: 假设在历史数据已知的情况下,零均值、纯随机残差序列具有异方差性.$$Var(ε_t)=h_t$$在满足正态分布的假定下,异方差等价于残差平方的均值$$E(ε^2_t)=h_t$$ARCH模型可以提取残差平方序列的相关信息,以获得原序列异方差特征. 模型意图: 在已知的ARIMA模型,残差自回归模型,以及确定性因素的分解模型拟合的是序列的平均水平,本质上只是一个点估计,无法给出估计的精度.或者说由于假定了方差齐性,其给出的区间估计是一个定值.对于存在异方差现象的序列无法精确的拟合.图片上述提到构建ARCH模型的意图是使用自回归提取误差平方序列的相关信息.它的条件方差是一个时变函数,更能及时的反映序列即期波动的特征,即异方差特征 ARCH检验: 在拟合ARCH模型的开始,需要对序列进行ARCH检验.要求序列的异方差是由于某种自相关性造成的.常用的两种统计方法: Portmanteau Q 检验和 LM检验 Portmanteau Q检验: 构造思想是如果残差序列方差非齐,且具有集群效应,那么残差平方序列通常具有自相关性.所以方差非齐的检验可以转换为残差平方序列的自相关检验假设条件: 当Q(q)统计量的P值小于显著水平α时,拒绝原假设,认为该序列方差非齐且具有自相关关系 LM检验: 构造思想是如果残差序列方差非齐,且具有集群效应,那么残差序列具有自相关性.因此可以尝试对残差平方序列进行自回归模型的拟合(ARCH(q)模型) $$ε^2_t=ω+\sumλjε^2{t-j}+e_t$$假设条件: 于是方差齐性的检验转换成这个方差是否显著成立的检验,若方差显著,意味着残差平方序列具有自相关性,可以用该回归方差提取自相关信息.决策:P值小于显著水平α时,拒绝原假设,认为该序列方差非齐,并且可以使用q阶自回归拟合残差平方序列的自相关关系]]></content>
       <tags>
         <tag>SAS</tag>
-        <tag>时间序列</tag>
+        <tag>Time Series</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Python实现递归案例汉诺塔]]></title>
+    <url>%2F2018%2F11%2F17%2F%E6%B1%89%E8%AF%BA%E5%A1%94%2F</url>
+    <content type="text"><![CDATA[汉诺塔问题描述 有三根杆子A，B，C。A杆上有 N 个 (N&gt;1) 穿孔圆盘，盘的尺寸由下到上依次变小。要求按下列规则将所有圆盘移至 C 杆： 每次只能移动一个圆盘； 大盘不能叠在小盘上面。 提示：可将圆盘临时置于 B 杆，也可将从 A 杆移出的圆盘重新移回 A 杆，但都必须遵循上述两条规则。 问：如何移？最少要移动多少次 分析 递归问题的思路:对于能归结为递归的问题，通常具备三个特征，函数+分支结构 、基例、链条 ，分支结构就是对基例和链条的判断。 对于汉诺塔问题，基例和链条如下 基例假设只有一个圆盘在a上，就可以将该圆盘从a直接移到c上，完成问题 链条假设有两个圆盘：将a上较小的圆盘先移动到过渡柱子b上，在将较大的盘移动到c上，最后将b上的盘移动c上，完成问题假设有三个圆盘：将a上除最后一个盘以外的盘 通过方法 移动到过渡柱子b上，再将a上最大盘移动到c上，最后再将b上的盘移动到c上，完成问题假设有n个圆盘：将a上前n-1个盘 通过方法 移动到b上，再将第n个盘移动到c上，最后再将b上的n-1个盘移到c上，完成问题 解释：通过方法并不需要我们具体分析，只需要知道通过某种方法能够将其移动。这也是使用递归的方便之处 代码实现1234567891011121314151617181920# 递归问题，汉诺塔count = 0# 描述盘个数，以及初始，过渡，目标柱子def hanota(n, src, dst, mid): global count# 基例 if n == 1: print("&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;".format(1, src, dst)) count += 1# 链条 else:# 第一次调用，将n-1个盘移动到过渡柱子mid上 hanota(n-1, src, mid, dst) print("&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;".format(n, src, dst)) count += 1# 第二次调用，将n-1个盘从mid上移动到dst上 hanota(n-1, mid, dst, src)hanota(3, 'a', 'c', 'b')print(count) 运行结果123456781:a-&gt;c2:a-&gt;b1:c-&gt;b3:a-&gt;c1:b-&gt;a2:b-&gt;c1:a-&gt;c7]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ARCH模型案例]]></title>
+    <url>%2F2018%2F11%2F17%2Farch%E6%A1%88%E4%BE%8B%2F</url>
+    <content type="text"><![CDATA[实例 对1926-1991年标普500股票股价波动的模型拟合 数据录入1234567data a;input return@@;t=intnx(&apos;month&apos;,&apos;1oct1926&apos;d,_n_-1);format t monyy5.;cards;... # 数据集; 模型构建ARIMA(尝试)对原序列进行模型识别,尝试建立ARMA模型失败.由图,序列自相关系数落在两倍标准差之上,具有长期自相关的特征 12proc arima;identify var=return minic; 序列总体定阶 q=3 残差自回归模型123456789proc autoreg;# 指令系统建立序列return的线性回归模型,#绘制残差序列的5阶自相关图,输出dw检验及P值,对残差序列进行异方差检验.# garch=(q=3) noint 通过对输出的分析后加的model return=t/nlag=5 dwprob archtest garch=(q=3) noint;# 输出到out数据集中output out=out lcl=lcl ucl=ucl cev=cev; DW检验显示与时间t不存在相关性 残差序列5阶滞后自相关图不存在截尾特征 异方差检验,拒绝原假设,方差非齐 结合自相关图和异方差检验,拟合ARCH(3)模型 拟合图形绘制12345678910data out;set out;Lcl_ARCH=-1.96*sqrt(cev);Ucl_ARCH=1.96*sqrt(cev);proc gplot data=out;plot return*t=2 lcl*t=3 LCL_arch*t=4 ucl*t=3 UCL_arch*t=4 /overlay;symbol2 c=green i=needle v=none ;symbol3 c=black i=join v=none w=2 l=2;symbol4 c=red i=join v=none ;run;]]></content>
+      <tags>
+        <tag>SAS</tag>
+        <tag>Time Series</tag>
       </tags>
   </entry>
 </search>
