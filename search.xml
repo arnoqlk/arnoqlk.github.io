@@ -21,6 +21,15 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[ARCH模型案例]]></title>
+    <url>%2F2018%2F11%2F17%2Farch%E6%A1%88%E4%BE%8B%2F</url>
+    <content type="text"><![CDATA[实例 对1926-1991年标普500股票股价波动的模型拟合 数据录入1234567data a;input return@@;t=intnx(&apos;month&apos;,&apos;1oct1926&apos;d,_n_-1);format t monyy5.;cards;... # 数据集; 模型构建ARIMA(尝试)对原序列进行模型识别,尝试建立ARMA模型失败.由图,序列自相关系数落在两倍标准差之上,具有长期自相关的特征 12proc arima;identify var=return minic; 序列总体定阶 q=3 残差自回归模型123456789proc autoreg;# 指令系统建立序列return的线性回归模型,#绘制残差序列的5阶自相关图,输出dw检验及P值,对残差序列进行异方差检验.# garch=(q=3) noint 通过对输出的分析后加的model return=t/nlag=5 dwprob archtest garch=(q=3) noint;# 输出到out数据集中output out=out lcl=lcl ucl=ucl cev=cev; DW检验显示与时间t不存在相关性 残差序列5阶滞后自相关图不存在截尾特征 异方差检验,拒绝原假设,方差非齐 结合自相关图和异方差检验,拟合ARCH(3)模型 拟合图形绘制12345678910data out;set out;Lcl_ARCH=-1.96*sqrt(cev);Ucl_ARCH=1.96*sqrt(cev);proc gplot data=out;plot return*t=2 lcl*t=3 LCL_arch*t=4 ucl*t=3 UCL_arch*t=4 /overlay;symbol2 c=green i=needle v=none ;symbol3 c=black i=join v=none w=2 l=2;symbol4 c=red i=join v=none ;run;]]></content>
+      <tags>
+        <tag>SAS</tag>
+        <tag>Time Series</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Python实现递归案例汉诺塔]]></title>
     <url>%2F2018%2F11%2F17%2F%E6%B1%89%E8%AF%BA%E5%A1%94%2F</url>
     <content type="text"><![CDATA[汉诺塔问题描述 有三根杆子A，B，C。A杆上有 N 个 (N&gt;1) 穿孔圆盘，盘的尺寸由下到上依次变小。要求按下列规则将所有圆盘移至 C 杆： 每次只能移动一个圆盘； 大盘不能叠在小盘上面。 提示：可将圆盘临时置于 B 杆，也可将从 A 杆移出的圆盘重新移回 A 杆，但都必须遵循上述两条规则。 问：如何移？最少要移动多少次 分析 递归问题的思路:对于能归结为递归的问题，通常具备三个特征，函数+分支结构 、基例、链条 ，分支结构就是对基例和链条的判断。 对于汉诺塔问题，基例和链条如下 基例假设只有一个圆盘在a上，就可以将该圆盘从a直接移到c上，完成问题 链条假设有两个圆盘：将a上较小的圆盘先移动到过渡柱子b上，在将较大的盘移动到c上，最后将b上的盘移动c上，完成问题假设有三个圆盘：将a上除最后一个盘以外的盘 通过方法 移动到过渡柱子b上，再将a上最大盘移动到c上，最后再将b上的盘移动到c上，完成问题假设有n个圆盘：将a上前n-1个盘 通过方法 移动到b上，再将第n个盘移动到c上，最后再将b上的n-1个盘移到c上，完成问题 解释：通过方法并不需要我们具体分析，只需要知道通过某种方法能够将其移动。这也是使用递归的方便之处 代码实现1234567891011121314151617181920# 递归问题，汉诺塔count = 0# 描述盘个数，以及初始，过渡，目标柱子def hanota(n, src, dst, mid): global count# 基例 if n == 1: print("&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;".format(1, src, dst)) count += 1# 链条 else:# 第一次调用，将n-1个盘移动到过渡柱子mid上 hanota(n-1, src, mid, dst) print("&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;".format(n, src, dst)) count += 1# 第二次调用，将n-1个盘从mid上移动到dst上 hanota(n-1, mid, dst, src)hanota(3, 'a', 'c', 'b')print(count) 运行结果123456781:a-&gt;c2:a-&gt;b1:c-&gt;b3:a-&gt;c1:b-&gt;a2:b-&gt;c1:a-&gt;c7]]></content>
@@ -29,15 +38,6 @@
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ARCH模型案例]]></title>
-    <url>%2F2018%2F11%2F17%2Farch%E6%A1%88%E4%BE%8B%2F</url>
-    <content type="text"><![CDATA[实例 对1926-1991年标普500股票股价波动的模型拟合 数据录入1234567data a;input return@@;t=intnx(&apos;month&apos;,&apos;1oct1926&apos;d,_n_-1);format t monyy5.;cards;... # 数据集; 模型构建ARIMA(尝试)对原序列进行模型识别,尝试建立ARMA模型失败.由图,序列自相关系数落在两倍标准差之上,具有长期自相关的特征 12proc arima;identify var=return minic; 序列总体定阶 q=3 残差自回归模型123456789proc autoreg;# 指令系统建立序列return的线性回归模型,#绘制残差序列的5阶自相关图,输出dw检验及P值,对残差序列进行异方差检验.# garch=(q=3) noint 通过对输出的分析后加的model return=t/nlag=5 dwprob archtest garch=(q=3) noint;# 输出到out数据集中output out=out lcl=lcl ucl=ucl cev=cev; DW检验显示与时间t不存在相关性 残差序列5阶滞后自相关图不存在截尾特征 异方差检验,拒绝原假设,方差非齐 结合自相关图和异方差检验,拟合ARCH(3)模型 拟合图形绘制12345678910data out;set out;Lcl_ARCH=-1.96*sqrt(cev);Ucl_ARCH=1.96*sqrt(cev);proc gplot data=out;plot return*t=2 lcl*t=3 LCL_arch*t=4 ucl*t=3 UCL_arch*t=4 /overlay;symbol2 c=green i=needle v=none ;symbol3 c=black i=join v=none w=2 l=2;symbol4 c=red i=join v=none ;run;]]></content>
-      <tags>
-        <tag>SAS</tag>
-        <tag>Time Series</tag>
       </tags>
   </entry>
 </search>
