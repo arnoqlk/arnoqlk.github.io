@@ -1882,7 +1882,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a3cc29;
+  background: #ffa462;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3195,10 +3195,10 @@ ul.breadcrumb li+li:last-child {
   transition: border-radius 2s;
 }
 @font-face {
-  font-family: bradhitc;
-  src: url("/fonts/bradhitc.ttf");
+  font-family: DAN;
+  src: url("/fonts/DAN.TTF");
 }
 .site-title {
   font-size: 40px !important;
-  font-family: 'bradhitc' !important;
+  font-family: 'DAN' !important;
 }
