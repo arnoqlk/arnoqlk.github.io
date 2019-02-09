@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[ARCH模型案例]]></title>
+    <title><![CDATA[Jupyter Notebook 快捷键]]></title>
     <url>%2F2019%2F02%2F05%2Fjupyter%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
     <content type="text"><![CDATA[Jupyter Notebook 有两种键盘输入模式。编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。 命令模式 (按键 Esc 开启)Enter : 转入编辑模式Shift-Enter : 运行本单元，选中下个单元Ctrl-Enter : 运行本单元Alt-Enter : 运行本单元，在其下插入新单元Y : 单元转入代码状态M :单元转入markdown状态R : 单元转入raw状态1 : 设定 1 级标题2 : 设定 2 级标题3 : 设定 3 级标题4 : 设定 4 级标题5 : 设定 5 级标题6 : 设定 6 级标题Up : 选中上方单元K : 选中上方单元Down : 选中下方单元J : 选中下方单元Shift-K : 扩大选中上方单元Shift-J : 扩大选中下方单元A : 在上方插入新单元B : 在下方插入新单元X : 剪切选中的单元C : 复制选中的单元Shift-V : 粘贴到上方单元V : 粘贴到下方单元Z : 恢复删除的最后一个单元D,D : 删除选中的单元Shift-M : 合并选中的单元Ctrl-S : 文件存盘S : 文件存盘L : 转换行号O : 转换输出Shift-O : 转换输出滚动Esc : 关闭页面Q : 关闭页面H : 显示快捷键帮助I,I : 中断Notebook内核0,0 : 重启Notebook内核Shift : 忽略Shift-Space : 向上滚动Space : 向下滚动 编辑模式 ( Enter 键启动)Tab : 代码补全或缩进Shift-Tab : 提示Ctrl-] : 缩进Ctrl-[ : 解除缩进Ctrl-A : 全选Ctrl-Z : 复原Ctrl-Shift-Z : 再做Ctrl-Y : 再做Ctrl-Home : 跳到单元开头Ctrl-Up : 跳到单元开头Ctrl-End : 跳到单元末尾Ctrl-Down : 跳到单元末尾Ctrl-Left : 跳到左边一个字首Ctrl-Right : 跳到右边一个字首Ctrl-Backspace : 删除前面一个字Ctrl-Delete : 删除后面一个字Esc : 进入命令模式Ctrl-M : 进入命令模式Shift-Enter : 运行本单元，选中下一单元Ctrl-Enter : 运行本单元Alt-Enter : 运行本单元，在下面插入一单元Ctrl-Shift– : 分割单元Ctrl-Shift-Subtract : 分割单元Ctrl-S : 文件存盘Shift : 忽略Up : 光标上移或转入上一单元Down :光标下移或转入下一单元]]></content>
       <categories>
@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[Stata 15软件安装]]></title>
     <url>%2F2019%2F01%2F31%2FStata-install%2F</url>
-    <content type="text"><![CDATA[Stata 是一套提供其使用者数据分析、数据管理以及绘制专业图表的完整及整合性统计软件,简单介绍下Stata15的安装 百度网盘链接: https://pan.baidu.com/s/1okYeegJINfC6ZCZJjqC-5w提取码: qtpx 安装破解安装 下载提供的stata安装包并解压 调整计算机系统时间为2016年左右 运行安装包.exe文件 选择stata/MP版本 自行选择软件安装路径(记住,要用到)和文件存放路径 安装完成,点击finish破解 复制安装包Crack文件夹下的STATA.LIC和StataMP-64.exe到上述的软件安装路径 点击StataMP-64.exe运行软件 完成破解]]></content>
+    <content type="text"><![CDATA[Stata 是一套提供其使用者数据分析、数据管理以及绘制专业图表的完整及整合性统计软件,简单介绍下Stata15的安装 百度网盘链接: https://pan.baidu.com/s/1okYeegJINfC6ZCZJjqC-5w提取码: qtpx 安装破解安装 下载提供的stata安装包并解压 调整计算机系统时间为2016年左右 运行安装包.exe文件 选择stata/MP版本 自行选择软件安装路径(记住,要用到)和文件存放路径 安装完成,点击finish 破解 复制安装包Crack文件夹下的STATA.LIC和StataMP-64.exe到上述的软件安装路径 点击StataMP-64.exe运行软件 完成破解]]></content>
       <categories>
         <category>Software</category>
       </categories>
