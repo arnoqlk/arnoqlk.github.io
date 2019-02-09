@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[基于github的Next主题博客搭建]]></title>
+    <title><![CDATA[ARCH模型案例]]></title>
+    <url>%2F2019%2F02%2F05%2Fjupyter%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[Jupyter Notebook 有两种键盘输入模式。编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。 命令模式 (按键 Esc 开启)Enter : 转入编辑模式Shift-Enter : 运行本单元，选中下个单元Ctrl-Enter : 运行本单元Alt-Enter : 运行本单元，在其下插入新单元Y : 单元转入代码状态M :单元转入markdown状态R : 单元转入raw状态1 : 设定 1 级标题2 : 设定 2 级标题3 : 设定 3 级标题4 : 设定 4 级标题5 : 设定 5 级标题6 : 设定 6 级标题Up : 选中上方单元K : 选中上方单元Down : 选中下方单元J : 选中下方单元Shift-K : 扩大选中上方单元Shift-J : 扩大选中下方单元A : 在上方插入新单元B : 在下方插入新单元X : 剪切选中的单元C : 复制选中的单元Shift-V : 粘贴到上方单元V : 粘贴到下方单元Z : 恢复删除的最后一个单元D,D : 删除选中的单元Shift-M : 合并选中的单元Ctrl-S : 文件存盘S : 文件存盘L : 转换行号O : 转换输出Shift-O : 转换输出滚动Esc : 关闭页面Q : 关闭页面H : 显示快捷键帮助I,I : 中断Notebook内核0,0 : 重启Notebook内核Shift : 忽略Shift-Space : 向上滚动Space : 向下滚动 编辑模式 ( Enter 键启动)Tab : 代码补全或缩进Shift-Tab : 提示Ctrl-] : 缩进Ctrl-[ : 解除缩进Ctrl-A : 全选Ctrl-Z : 复原Ctrl-Shift-Z : 再做Ctrl-Y : 再做Ctrl-Home : 跳到单元开头Ctrl-Up : 跳到单元开头Ctrl-End : 跳到单元末尾Ctrl-Down : 跳到单元末尾Ctrl-Left : 跳到左边一个字首Ctrl-Right : 跳到右边一个字首Ctrl-Backspace : 删除前面一个字Ctrl-Delete : 删除后面一个字Esc : 进入命令模式Ctrl-M : 进入命令模式Shift-Enter : 运行本单元，选中下一单元Ctrl-Enter : 运行本单元Alt-Enter : 运行本单元，在下面插入一单元Ctrl-Shift– : 分割单元Ctrl-Shift-Subtract : 分割单元Ctrl-S : 文件存盘Shift : 忽略Up : 光标上移或转入上一单元Down :光标下移或转入下一单元]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Stata 15软件安装]]></title>
+    <url>%2F2019%2F01%2F31%2FStata-install%2F</url>
+    <content type="text"><![CDATA[Stata 是一套提供其使用者数据分析、数据管理以及绘制专业图表的完整及整合性统计软件,简单介绍下Stata15的安装 百度网盘链接: https://pan.baidu.com/s/1okYeegJINfC6ZCZJjqC-5w提取码: qtpx 安装破解安装 下载提供的stata安装包并解压 调整计算机系统时间为2016年左右 运行安装包.exe文件 选择stata/MP版本 自行选择软件安装路径(记住,要用到)和文件存放路径 安装完成,点击finish破解 复制安装包Crack文件夹下的STATA.LIC和StataMP-64.exe到上述的软件安装路径 点击StataMP-64.exe运行软件 完成破解]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Stata</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[github的Next主题博客搭建]]></title>
     <url>%2F2019%2F01%2F10%2F%E5%9F%BA%E4%BA%8Egithub%E7%9A%84Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%2F</url>
-    <content type="text"><![CDATA[有关github搭建免费博客的方法已有很多,再次赘述的目的是为了记录自己在搭建时所遇到的诸多比较麻烦的问题,方便以后查阅. 准备工作(github,git bash,node.js,npm,Next主题) github新建一个名称为 github用户名.github.io 的仓库,作为存放博客文件和代码的地方 git在自己的计算机上安装git,用于将写好的博客和配置文件推送到github的远程仓库 node.jsnode.js是JavaScript的一种运行环境,npm是包含在npm的,具体的下载可以百度 npmnpm用来安装hexo(简洁高效的博客框架),在git bash使用以下命令安装 npm install -g hexo hexo在本地新建一个文件夹作为本地仓库(在本地仓库写博客修改再推送到远程仓库),在文件夹内输入以下命令 hexo init hexo的几个常用命令 作用 hexo clean 清除缓存 hexo g 生成静态网页 hexo s 本地生成博客网站 hexo d 部署到远程 Next主题配置Next主题的安装,建议去github上下载zip包,本地解压放进博客根目录下的themes文件夹下,对应的修改站点配置文件_config.yml里的theme项为next(next是存放主题的文件名称) 修改Next主题风格Next通过四种风格可选,个人比较偏好最后一个,可以自己尝试修改 # Schemes # scheme: Muse # scheme: Mist # scheme: Pisces scheme: Gemini 菜单设置Next默认只有两个菜单导航条,可以在主题配置文件中修改 menu: home: / #主页 categories: /categories #分类页（需手动创建） about: /about #关于页面（需手动创建） archives: /archives #归档页 tags: /tags #标签页（需手动创建） commonweal: /404.html #公益 404 （需手动创建） 手动创建是指,举个例子,譬如要打开tags导航条,在git bash下运行, hexo new page &quot;tags&quot; 并修改/source/categories目录下的index.md文件 title: tags date: 2015-09-29 14:47:21 type: &quot;tags&quot; --- sitmap插件Sitemap 可方便管理员通知搜索引擎他们网站上有哪些可供抓取的网页，有助于让别人更好地通过搜索到自己的博客 安装 npm install hexo-generator-sitemap --save 评论系统Gitalk的配置使用首先，你得有一个Github账号（这个就不多说了吧），下面，打开这个链接，具体填法如下： Application name //应用名称，随便填 Homepage URL //没有过多要求，可以填自己的博客地址 Application description //应用描述，描述一下，无要求 Authorization callback URL //这个就有要求了，填自己要使用Gitalk的博客地址，不可乱填 对应到主题配置文件下的gitalk enable: true #指的是是否开启Gitalk ClientID: xxxxxx #之前的Client ID ClientSecret: xxxxxxxxxxxx #之前的Client Secret repo: gitalk #你要存放的项目名，下文会详细再说 owner: geedme #这个项目名的拥有者（GitHub账号或组织） adminUser: geedme #管理员用户，下文也会详细讲 ID: location.pathname #页面ID，不知道就默认的就好了 labels: gitalk #GitHub issues的标签，下面会详细说 perPage: 15 #每页多少个评论 pagerDirection: last #排序方式是从旧到新（first）还是从新到旧（last） createIssueManually: true #如果当前页面没有相应的 isssue ，且登录的用户属 于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。 distractionFreeMode: false #是否启用快捷键(cmd|ctrl + enter) 提交评论. 推送远程仓库的常见问题deploy: type: git repository: git@github.com:xxx/xxx.github.io.git branch: master 参考附录 小茗同学的博客园 关于HEXO搭建个人博客的点点滴滴 Hexo搭建Github博客(三)-Next主题配置使用 Hexo中Gitalk配置使用教程]]></content>
+    <content type="text"><![CDATA[有关github搭建免费博客的方法已有很多,再次赘述的目的是为了记录自己在搭建时所遇到的诸多比较麻烦的问题,方便以后查阅. 准备工作(github,git bash,node.js,npm,Next主题) github新建一个名称为 github用户名.github.io 的仓库,作为存放博客文件和代码的地方 git在自己的计算机上安装git,用于将写好的博客和配置文件推送到github的远程仓库 node.jsnode.js是JavaScript的一种运行环境,npm是包含在npm的,具体的下载可以百度 npmnpm用来安装hexo(简洁高效的博客框架),在git bash使用以下命令安装 npm install -g hexo hexo在本地新建一个文件夹作为本地仓库(在本地仓库写博客修改再推送到远程仓库),在文件夹内输入以下命令 hexo init ####### 快捷键|hexo的几个常用命令|作用||:——–:|:——–:||hexo clean| 清除缓存||hexo g|生成静态网页||hexo s|本地生成博客网站||hexo d|部署到远程||hexo new ‘文章名称’|新建文章| ####### 博客头格式1234567891011---title: postName #文章页面上的显示名称，一般是中文date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改categories: 默认分类 #分类# tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格,或者:tags:- 标签1- 标签2- 标签3description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面--- Next主题配置Next主题的安装,建议去github上下载zip包,本地解压放进博客根目录下的themes文件夹下,对应的修改站点配置文件_config.yml里的theme项为next(next是存放主题的文件名称) 修改Next主题风格Next通过四种风格可选,个人比较偏好最后一个,可以自己尝试修改 # Schemes # scheme: Muse # scheme: Mist # scheme: Pisces scheme: Gemini 菜单设置Next默认只有两个菜单导航条,可以在主题配置文件中修改 menu: home: / #主页 categories: /categories #分类页（需手动创建） about: /about #关于页面（需手动创建） archives: /archives #归档页 tags: /tags #标签页（需手动创建） commonweal: /404.html #公益 404 （需手动创建） 手动创建是指,举个例子,譬如要打开tags导航条,在git bash下运行, hexo new page &quot;tags&quot; 并修改/source/categories目录下的index.md文件 title: tags date: 2015-09-29 14:47:21 type: &quot;tags&quot; --- sitmap插件Sitemap 可方便管理员通知搜索引擎他们网站上有哪些可供抓取的网页，有助于让别人更好地通过搜索到自己的博客 安装 npm install hexo-generator-sitemap --save 评论系统Gitalk的配置使用首先，你得有一个Github账号（这个就不多说了吧），下面，打开这个链接，具体填法如下： Application name //应用名称，随便填 Homepage URL //没有过多要求，可以填自己的博客地址 Application description //应用描述，描述一下，无要求 Authorization callback URL //这个就有要求了，填自己要使用Gitalk的博客地址，不可乱填 对应到主题配置文件下的gitalk enable: true #指的是是否开启Gitalk ClientID: xxxxxx #之前的Client ID ClientSecret: xxxxxxxxxxxx #之前的Client Secret repo: gitalk #你要存放的项目名，下文会详细再说 owner: geedme #这个项目名的拥有者（GitHub账号或组织） adminUser: geedme #管理员用户，下文也会详细讲 ID: location.pathname #页面ID，不知道就默认的就好了 labels: gitalk #GitHub issues的标签，下面会详细说 perPage: 15 #每页多少个评论 pagerDirection: last #排序方式是从旧到新（first）还是从新到旧（last） createIssueManually: true #如果当前页面没有相应的 isssue ，且登录的用户属 于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。 distractionFreeMode: false #是否启用快捷键(cmd|ctrl + enter) 提交评论. 推送远程仓库的常见问题deploy: type: git repository: git@github.com:xxx/xxx.github.io.git branch: master 参考附录 小茗同学的博客园 关于HEXO搭建个人博客的点点滴滴 Hexo搭建Github博客(三)-Next主题配置使用 Hexo中Gitalk配置使用教程]]></content>
       <categories>
         <category>blog</category>
       </categories>
@@ -15,6 +37,9 @@
     <title><![CDATA[条件异方差模型]]></title>
     <url>%2F2018%2F11%2F17%2FARCH%E6%A8%A1%E5%9E%8B%2F</url>
     <content type="text"><![CDATA[对于异方差序列的精确拟合,有方差齐性变化以及条件异方差模型两种方法.实践中,异方差函数的具体形式一般未知,因此在宏观经济领域和金融领域广泛采用条件异方差模型对异方差波动进行处理 集群效应对于提取完毕确定性信息之后,残差序列的波动,具有某些时段波动持续偏大的特征,如图示 说明: 集群效应,其本质是异方差现象.出现集群效应的时间序列,其方差基本齐性,但存在某段或某几段方差异与期望方差.因此基于齐性方差的分析方法无法确切拟合.通常,意味着需要引用 条件方差模型 ARCH 模型 全称,自回归条件方差模型(autoregressive conditional heteroskedastic),1982. Engle 提出 构造原理: 假设在历史数据已知的情况下,零均值、纯随机残差序列具有异方差性.$$Var(ε_t)=h_t$$在满足正态分布的假定下,异方差等价于残差平方的均值$$E(ε^2_t)=h_t$$ARCH模型可以提取残差平方序列的相关信息,以获得原序列异方差特征. 模型意图: 在已知的ARIMA模型,残差自回归模型,以及确定性因素的分解模型拟合的是序列的平均水平,本质上只是一个点估计,无法给出估计的精度.或者说由于假定了方差齐性,其给出的区间估计是一个定值.对于存在异方差现象的序列无法精确的拟合.图片上述提到构建ARCH模型的意图是使用自回归提取误差平方序列的相关信息.它的条件方差是一个时变函数,更能及时的反映序列即期波动的特征,即异方差特征 ARCH检验: 在拟合ARCH模型的开始,需要对序列进行ARCH检验.要求序列的异方差是由于某种自相关性造成的.常用的两种统计方法: Portmanteau Q 检验和 LM检验 Portmanteau Q检验: 构造思想是如果残差序列方差非齐,且具有集群效应,那么残差平方序列通常具有自相关性.所以方差非齐的检验可以转换为残差平方序列的自相关检验假设条件: 当Q(q)统计量的P值小于显著水平α时,拒绝原假设,认为该序列方差非齐且具有自相关关系 LM检验: 构造思想是如果残差序列方差非齐,且具有集群效应,那么残差序列具有自相关性.因此可以尝试对残差平方序列进行自回归模型的拟合(ARCH(q)模型) $$ε^2_t=ω+\sumλjε^2{t-j}+e_t$$假设条件: 于是方差齐性的检验转换成这个方差是否显著成立的检验,若方差显著,意味着残差平方序列具有自相关性,可以用该回归方差提取自相关信息.决策:P值小于显著水平α时,拒绝原假设,认为该序列方差非齐,并且可以使用q阶自回归拟合残差平方序列的自相关关系]]></content>
+      <categories>
+        <category>模型</category>
+      </categories>
       <tags>
         <tag>SAS</tag>
         <tag>Time Series</tag>
@@ -24,6 +49,9 @@
     <title><![CDATA[ARCH模型案例]]></title>
     <url>%2F2018%2F11%2F17%2Farch%E6%A1%88%E4%BE%8B%2F</url>
     <content type="text"><![CDATA[实例 对1926-1991年标普500股票股价波动的模型拟合 数据录入1234567data a;input return@@;t=intnx(&apos;month&apos;,&apos;1oct1926&apos;d,_n_-1);format t monyy5.;cards;... # 数据集; 模型构建ARIMA(尝试)对原序列进行模型识别,尝试建立ARMA模型失败.由图,序列自相关系数落在两倍标准差之上,具有长期自相关的特征 12proc arima;identify var=return minic; 序列总体定阶 q=3 残差自回归模型123456789proc autoreg;# 指令系统建立序列return的线性回归模型,#绘制残差序列的5阶自相关图,输出dw检验及P值,对残差序列进行异方差检验.# garch=(q=3) noint 通过对输出的分析后加的model return=t/nlag=5 dwprob archtest garch=(q=3) noint;# 输出到out数据集中output out=out lcl=lcl ucl=ucl cev=cev; DW检验显示与时间t不存在相关性 残差序列5阶滞后自相关图不存在截尾特征 异方差检验,拒绝原假设,方差非齐 结合自相关图和异方差检验,拟合ARCH(3)模型 拟合图形绘制12345678910data out;set out;Lcl_ARCH=-1.96*sqrt(cev);Ucl_ARCH=1.96*sqrt(cev);proc gplot data=out;plot return*t=2 lcl*t=3 LCL_arch*t=4 ucl*t=3 UCL_arch*t=4 /overlay;symbol2 c=green i=needle v=none ;symbol3 c=black i=join v=none w=2 l=2;symbol4 c=red i=join v=none ;run;]]></content>
+      <categories>
+        <category>模型</category>
+      </categories>
       <tags>
         <tag>SAS</tag>
         <tag>Time Series</tag>
